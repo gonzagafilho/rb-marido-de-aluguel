@@ -1,0 +1,317 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f4f6f9;
+  color: #333;
+}
+
+/* ===== HERO ===== */
+.hero {
+  height: 90vh;
+  background: linear-gradient(
+    135deg,
+    #0A2A4F 0%,
+    #0F4C81 40%,
+    #1E6FB6 70%,
+    #0A2A4F 100%
+  );
+  background-size: 300% 300%;
+  animation: gradientMove 12s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+@keyframes gradientMove {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.overlay {
+  text-align: center;
+  color: #fff;
+  animation: fadeUp 1.2s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.overlay h1 {
+  font-size: 3.2rem;
+  max-width: 950px;
+  margin: auto;
+  line-height: 1.15;
+  font-weight: 800;
+  text-shadow: 0 6px 20px rgba(0,0,0,0.35);
+}
+
+.overlay p {
+  font-size: 1.4rem;
+  margin-top: 20px;
+  opacity: 0.95;
+}
+
+/* ===== BOTÕES ===== */
+.buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 16px 32px;
+  border-radius: 6px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.green {
+  background: linear-gradient(135deg, #1ebe5d, #25d366);
+}
+
+.blue {
+  background: linear-gradient(135deg, #0F4C81, #1E6FB6);
+}
+
+.btn {
+  padding: 16px 34px;
+  border-radius: 8px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+}
+
+/* ===== SEÇÕES ===== */
+section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.3rem;
+  margin-bottom: 50px;
+  color: #0a3d91;
+}
+
+/* ===== SERVIÇOS ===== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #fff;
+  padding: 35px 25px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+}
+
+/* ===== DIFERENCIAIS ===== */
+.diferenciais {
+  background: linear-gradient(135deg, #ffffff, #eef3fa);
+  border-radius: 20px;
+}
+
+.diferenciais ul {
+  list-style: none;
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.2rem;
+}
+
+.diferenciais li {
+  margin: 15px 0;
+  padding-left: 10px;
+}
+
+/* ===== ORÇAMENTO ===== */
+.orcamento {
+  background: linear-gradient(135deg, #0a3d91, #0f6cd1);
+  color: #fff;
+  border-radius: 20px;
+}
+
+.orcamento h2 {
+  color: #fff;
+}
+
+.orcamento form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.orcamento input,
+.orcamento textarea {
+  padding: 14px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+}
+textarea {
+  resize: none;
+  height: 120px;
+}
+
+.orcamento button {
+  background: linear-gradient(135deg, #1ebe5d, #25d366);
+  color: #fff;
+  padding: 15px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.orcamento button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #081a33;
+  color: #fff;
+  text-align: center;
+  padding: 35px 20px;
+  font-size: 0.95rem;
+}
+/* ===== TOPO COM LOGO ===== */
+.top-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: flex-start;
+  z-index: 20;
+}
+
+.logo-area img {
+  height: 180px;   /* TOPO GRANDE */
+  width: auto;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .top-bar {
+    padding: 20px 20px;
+  }
+ /* TOPO GRANDE */
+  .logo-area img {
+    height: 90px;
+  }
+}
+
+/* ===== TEXTO CENTRAL MAIS FORTE ===== */
+.overlay h1 {
+  font-size: 3rem;
+  max-width: 900px;
+  margin: auto;
+  line-height: 1.2;
+}
+
+.overlay p {
+  font-size: 1.3rem;
+  margin-top: 20px;
+  opacity: 0.95;
+}
+h2::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 4px;
+  margin: 18px auto 0;
+  background: linear-gradient(90deg, #F4C430, #D4A017);
+  border-radius: 3px;
+}
+.top-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 40px;
+  display: flex;
+  align-items: center;
+  z-index: 20;
+}
+/* ===== BOTÃO WHATSAPP FLUTUANTE ===== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 65px;
+  height: 65px;
+  background: linear-gradient(135deg, #1ebe5d, #25d366);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float img {
+  width: 34px;
+  height: 34px;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.45);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    width: 58px;
+    height: 58px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .whatsapp-float img {
+    width: 30px;
+    height: 30px;
+  }
+}
